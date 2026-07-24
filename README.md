@@ -129,7 +129,11 @@ AI-driven flow / productivity tool.
 </div>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/kush1126/kush1126/output/assets/github-contribution-grid-snake.svg" width="100%" alt="contribution snake"/>
+### 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kush1126/kush1126/output/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%">
+</p>
 </div>
 
 <sub align="center">↑ animated contribution snake — generated automatically by the workflow in <code>.github/workflows/snake.yml</code> once Actions runs on this repo (see setup note below).</sub>
