@@ -1,18 +1,18 @@
 # 🚧 Project Craftfolio
 
 <div align="center">
-  <img src="assets/hero-banner.svg?v=4" width="100%" alt="Craftfolio Hero Banner"/>
+  <img src="assets/hero-banner.svg?v=5" width="100%" alt="Craftfolio Hero Banner"/>
 </div>
 
 <br/>
 
-<table align="center" style="border: none; background: transparent;">
+<table align="center" style="border: none; background: transparent; border-collapse: collapse; width: 100%;">
   <tr>
-    <td width="60%" align="center" valign="middle" style="border: none;">
-      <img src="assets/player-card.svg?v=4" width="100%" alt="Player Identity Card"/>
+    <td width="62%" align="center" valign="middle" style="border: none; padding: 0;">
+      <img src="assets/player-card.svg?v=5" width="100%" alt="Player Identity Card"/>
     </td>
-    <td width="40%" align="center" valign="middle" style="border: none;">
-      <img src="assets/achievements.svg?v=4" width="100%" alt="Achievements"/>
+    <td width="38%" align="center" valign="top" style="border: none; padding: 0;">
+      <img src="assets/achievements.svg?v=5" width="100%" alt="Achievements"/>
     </td>
   </tr>
 </table>
@@ -26,14 +26,14 @@
 ---
 
 <div align="center">
-  <img src="assets/inventory.svg?v=4" width="100%" alt="Inventory Tech Stack"/>
+  <img src="assets/inventory.svg?v=5" width="100%" alt="Inventory Tech Stack"/>
 </div>
 
 ---
 
 <div align="center">
   <h2>🏰 World Map (Projects)</h2>
-  <img src="assets/projects.svg?v=4" width="100%" alt="Projects Landscape"/>
+  <img src="assets/projects.svg?v=5" width="100%" alt="Projects Landscape"/>
   
   <br/>
   <br/>
@@ -46,9 +46,11 @@
 
 ---
 
-## 📊 Stats & 🐍 Contribution Cave (Coming Soon)
-<!-- Milestone 3 will add custom GitHub stats and animated snake cave -->
-> *Mining diamonds...*
+## 📊 Stats & 🐍 Contribution Snake Cave
+
+<div align="center">
+  <img src="assets/snake-cave.svg?v=5" width="100%" alt="GitHub Stats and Contribution Snake Cave"/>
+</div>
 
 ---
 
@@ -57,7 +59,7 @@
   <p>
     <b>Gamemode:</b> Creative &nbsp;&nbsp;|&nbsp;&nbsp; 
     <b>Difficulty:</b> Hard &nbsp;&nbsp;|&nbsp;&nbsp; 
-    <b>Current Biome:</b> Snow Mountains &nbsp;&nbsp;|&nbsp;&nbsp; 
+    <b>Current Biome:</b> Plains &nbsp;&nbsp;|&nbsp;&nbsp; 
     <b>Seed:</b> <code>11262006</code>
   </p>
 </div>

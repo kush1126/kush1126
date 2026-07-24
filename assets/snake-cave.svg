@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="400">
+  <defs>
+    <style>
+      @keyframes slither {
+        0% { transform: translateX(-820px); }
+        100% { transform: translateX(820px); }
+      }
+      @keyframes lavaGlow {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      @keyframes glowPulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+      .snake { animation: slither 8s linear infinite; }
+      .lava { animation: lavaGlow 1.5s infinite alternate; }
+      .glowstone { animation: glowPulse 2s infinite ease-in-out; }
+      .torch { animation: flicker 0.2s infinite alternate; }
+      .mc-text { font-family: 'Courier New', Courier, monospace; }
+    </style>
+
+    <!-- Cave Wall pattern -->
+    <pattern id="caveWall" patternUnits="userSpaceOnUse" width="16" height="16">
+      <rect width="16" height="16" fill="#1A1A1A"/>
+      <rect x="0" y="0" width="8" height="8" fill="#222222"/>
+      <rect x="8" y="8" width="8" height="8" fill="#1E1E1E"/>
+      <rect x="1" y="1" width="3" height="3" fill="#2A2A2A" opacity="0.5"/>
+    </pattern>
+
+    <!-- Stone pattern -->
+    <pattern id="stonePat" patternUnits="userSpaceOnUse" width="16" height="16">
+      <rect width="16" height="16" fill="#555555"/>
+      <rect x="0" y="0" width="8" height="8" fill="#5A5A5A"/>
+      <rect x="8" y="8" width="8" height="8" fill="#525252"/>
+      <rect x="0" y="8" width="8" height="8" fill="#585858"/>
+      <rect x="8" y="0" width="8" height="8" fill="#4E4E4E"/>
+    </pattern>
+
+    <!-- Lava pattern -->
+    <pattern id="lavaPat" patternUnits="userSpaceOnUse" width="32" height="16">
+      <rect width="32" height="16" fill="#FF4500"/>
+      <rect x="4" y="4" width="8" height="8" fill="#FF6A00"/>
+      <rect x="20" y="2" width="6" height="6" fill="#FF8C00"/>
+      <rect x="0" y="8" width="4" height="4" fill="#FF6A00"/>
+      <rect x="16" y="8" width="8" height="4" fill="#FF8C00"/>
+    </pattern>
+  </defs>
+
+  <!-- ===== CAVE BACKGROUND ===== -->
+  <rect width="800" height="400" fill="url(#caveWall)"/>
+
+  <!-- Cave ceiling jagged -->
+  <path d="M0,0 L0,60 L20,80 L50,55 L80,90 L120,60 L160,85 L200,55 L240,80 L280,50 L320,75 L360,55 L400,80 L440,50 L480,75 L520,55 L560,80 L600,60 L640,85 L680,55 L720,80 L760,55 L800,70 L800,0 Z" fill="url(#stonePat)"/>
+
+  <!-- Cave floor jagged -->
+  <path d="M0,400 L0,330 L30,320 L70,340 L110,315 L160,335 L200,320 L250,340 L300,315 L340,330 L380,315 L420,335 L460,310 L510,330 L550,315 L600,335 L640,310 L680,330 L730,315 L770,330 L800,310 L800,400 Z" fill="url(#stonePat)"/>
+
+  <!-- ===== LAVA POOLS ===== -->
+  <!-- Left lava pool -->
+  <rect x="0" y="355" width="120" height="45" fill="url(#lavaPat)" class="lava" rx="2"/>
+  <rect x="0" y="350" width="120" height="10" fill="#FF6A00" opacity="0.5" class="lava"/>
+
+  <!-- Middle lava pool -->
+  <rect x="320" y="358" width="180" height="42" fill="url(#lavaPat)" class="lava" rx="2"/>
+  <rect x="320" y="353" width="180" height="10" fill="#FF6A00" opacity="0.5" class="lava"/>
+
+  <!-- Right lava pool -->
+  <rect x="680" y="355" width="120" height="45" fill="url(#lavaPat)" class="lava" rx="2"/>
+  <rect x="680" y="350" width="120" height="10" fill="#FF6A00" opacity="0.5" class="lava"/>
+
+  <!-- ===== GLOWSTONE CLUSTERS ===== -->
+  <!-- Top glowstones -->
+  <g class="glowstone">
+    <rect x="50" y="60" width="16" height="16" fill="#FFDF50"/>
+    <rect x="66" y="60" width="16" height="16" fill="#FFE87A"/>
+    <rect x="50" y="76" width="16" height="16" fill="#FFD700"/>
+    <rect x="66" y="76" width="16" height="8" fill="#FFE87A"/>
+    <!-- Glow effect -->
+    <rect x="30" y="40" width="76" height="76" fill="#FFDF50" opacity="0.15" rx="4"/>
+  </g>
+  <g class="glowstone" style="animation-delay:0.7s">
+    <rect x="690" y="55" width="16" height="16" fill="#FFDF50"/>
+    <rect x="706" y="55" width="16" height="16" fill="#FFE87A"/>
+    <rect x="690" y="71" width="16" height="16" fill="#FFD700"/>
+    <rect x="706" y="71" width="16" height="8" fill="#FFE87A"/>
+    <rect x="670" y="35" width="76" height="76" fill="#FFDF50" opacity="0.15" rx="4"/>
+  </g>
+  <g class="glowstone" style="animation-delay:1.4s">
+    <rect x="380" y="50" width="16" height="16" fill="#FFDF50"/>
+    <rect x="396" y="50" width="16" height="16" fill="#FFE87A"/>
+    <rect x="380" y="66" width="16" height="16" fill="#FFD700"/>
+    <rect x="396" y="66" width="8" height="8" fill="#FFE87A"/>
+    <rect x="360" y="30" width="60" height="60" fill="#FFDF50" opacity="0.15" rx="4"/>
+  </g>
+
+  <!-- ===== DIAMOND VEINS ===== -->
+  <!-- Left diamond vein in wall -->
+  <g opacity="0.9">
+    <rect x="140" y="200" width="16" height="16" fill="#33E5E5"/>
+    <rect x="156" y="192" width="16" height="16" fill="#7FFFFF"/>
+    <rect x="140" y="216" width="16" height="8" fill="#33E5E5"/>
+    <rect x="124" y="208" width="16" height="16" fill="#7FFFFF"/>
+    <!-- Diamond glow -->
+    <rect x="110" y="180" width="80" height="70" fill="#33E5E5" opacity="0.1" rx="4"/>
+  </g>
+  <!-- Right diamond vein -->
+  <g opacity="0.9">
+    <rect x="640" y="210" width="16" height="16" fill="#33E5E5"/>
+    <rect x="656" y="202" width="16" height="16" fill="#7FFFFF"/>
+    <rect x="640" y="226" width="16" height="8" fill="#33E5E5"/>
+    <rect x="624" y="218" width="16" height="8" fill="#7FFFFF"/>
+    <rect x="610" y="190" width="80" height="70" fill="#33E5E5" opacity="0.1" rx="4"/>
+  </g>
+
+  <!-- ===== TORCHES ON WALLS ===== -->
+  <!-- Left torch -->
+  <g transform="translate(200, 200)">
+    <rect x="-4" y="0" width="8" height="30" fill="#5D4037"/>
+    <rect x="-5" y="-5" width="10" height="8" fill="#3E2723"/>
+    <rect x="-14" y="-22" width="28" height="28" fill="#FF8F00" opacity="0.35" class="torch"/>
+    <rect x="-3" y="-12" width="6" height="10" fill="#FFC107" class="torch"/>
+    <rect x="-1" y="-14" width="2" height="6" fill="#FFF8E1" class="torch"/>
+  </g>
+  <!-- Right torch -->
+  <g transform="translate(600, 200)">
+    <rect x="-4" y="0" width="8" height="30" fill="#5D4037"/>
+    <rect x="-5" y="-5" width="10" height="8" fill="#3E2723"/>
+    <rect x="-14" y="-22" width="28" height="28" fill="#FF8F00" opacity="0.35" class="torch" style="animation-delay:0.1s"/>
+    <rect x="-3" y="-12" width="6" height="10" fill="#FFC107" class="torch" style="animation-delay:0.1s"/>
+    <rect x="-1" y="-14" width="2" height="6" fill="#FFF8E1" class="torch" style="animation-delay:0.1s"/>
+  </g>
+  <!-- Mid torch -->
+  <g transform="translate(400, 190)">
+    <rect x="-4" y="0" width="8" height="30" fill="#5D4037"/>
+    <rect x="-5" y="-5" width="10" height="8" fill="#3E2723"/>
+    <rect x="-14" y="-22" width="28" height="28" fill="#FF8F00" opacity="0.35" class="torch" style="animation-delay:0.05s"/>
+    <rect x="-3" y="-12" width="6" height="10" fill="#FFC107" class="torch" style="animation-delay:0.05s"/>
+    <rect x="-1" y="-14" width="2" height="6" fill="#FFF8E1" class="torch" style="animation-delay:0.05s"/>
+  </g>
+
+  <!-- ===== GITHUB STATS PANEL ===== -->
+  <!-- Stats Panel Background -->
+  <rect x="80" y="120" width="640" height="180" fill="#0D1117" rx="8" opacity="0.95"/>
+  <rect x="80" y="120" width="640" height="180" fill="none" stroke="#33E5E5" stroke-width="2" rx="8" opacity="0.5"/>
+
+  <!-- Section Title -->
+  <text x="400" y="155" class="mc-text" font-size="20" font-weight="bold" fill="#33E5E5" text-anchor="middle">⚡ GITHUB STATS ⚡</text>
+  <line x1="120" y1="162" x2="680" y2="162" stroke="#33E5E5" stroke-width="1" opacity="0.4"/>
+
+  <!-- Stats Row 1 -->
+  <text x="140" y="192" class="mc-text" font-size="14" fill="#AAAAAA">🌟 Stars Earned:</text>
+  <text x="320" y="192" class="mc-text" font-size="14" fill="#FFD700" font-weight="bold">42</text>
+
+  <text x="430" y="192" class="mc-text" font-size="14" fill="#AAAAAA">🍴 Total Forks:</text>
+  <text x="600" y="192" class="mc-text" font-size="14" fill="#7FFFFF" font-weight="bold">12</text>
+
+  <!-- Stats Row 2 -->
+  <text x="140" y="222" class="mc-text" font-size="14" fill="#AAAAAA">📦 Public Repos:</text>
+  <text x="320" y="222" class="mc-text" font-size="14" fill="#88FFA1" font-weight="bold">18</text>
+
+  <text x="430" y="222" class="mc-text" font-size="14" fill="#AAAAAA">🔥 Total Commits:</text>
+  <text x="620" y="222" class="mc-text" font-size="14" fill="#FF8C00" font-weight="bold">500+</text>
+
+  <!-- Stats Row 3 -->
+  <text x="140" y="252" class="mc-text" font-size="14" fill="#AAAAAA">💎 Top Language:</text>
+  <text x="330" y="252" class="mc-text" font-size="14" fill="#33E5E5" font-weight="bold">JavaScript</text>
+
+  <text x="430" y="252" class="mc-text" font-size="14" fill="#AAAAAA">👥 Followers:</text>
+  <text x="580" y="252" class="mc-text" font-size="14" fill="#FF69B4" font-weight="bold">2</text>
+
+  <!-- ===== SNAKE TRAIL ===== -->
+  <clipPath id="caveClip">
+    <rect x="0" y="90" width="800" height="220"/>
+  </clipPath>
+
+  <g clip-path="url(#caveClip)" class="snake">
+    <!-- Snake body trail (contribution squares styled as snake) -->
+    <!-- Each square = one "contribution" in the snake -->
+    <g fill="#39F547">
+      <!-- Head -->
+      <rect x="-80" y="290" width="14" height="14" fill="#00FF00" rx="2"/>
+      <!-- Body segments undulating path -->
+      <rect x="-96" y="290" width="14" height="14" rx="2"/>
+      <rect x="-112" y="290" width="14" height="14" rx="2"/>
+      <rect x="-128" y="276" width="14" height="14" rx="2"/>
+      <rect x="-144" y="262" width="14" height="14" rx="2"/>
+      <rect x="-160" y="262" width="14" height="14" rx="2"/>
+      <rect x="-176" y="262" width="14" height="14" rx="2"/>
+      <rect x="-192" y="276" width="14" height="14" rx="2"/>
+      <rect x="-208" y="290" width="14" height="14" rx="2"/>
+      <rect x="-224" y="290" width="14" height="14" rx="2"/>
+      <rect x="-240" y="290" width="14" height="14" rx="2"/>
+      <rect x="-256" y="276" width="14" height="14" rx="2"/>
+      <rect x="-272" y="262" width="14" height="14" rx="2"/>
+      <rect x="-288" y="276" width="14" height="14" rx="2"/>
+      <rect x="-304" y="290" width="14" height="14" rx="2"/>
+      <rect x="-320" y="290" width="14" height="14" rx="2"/>
+      <!-- Diamond bonus segment -->
+      <rect x="-336" y="290" width="14" height="14" fill="#33E5E5" rx="2"/>
+      <rect x="-352" y="290" width="14" height="14" rx="2"/>
+      <rect x="-368" y="290" width="14" height="14" rx="2"/>
+      <rect x="-384" y="276" width="14" height="14" rx="2"/>
+      <rect x="-400" y="262" width="14" height="14" rx="2"/>
+      <rect x="-416" y="262" width="14" height="14" rx="2"/>
+      <rect x="-432" y="276" width="14" height="14" rx="2"/>
+      <rect x="-448" y="290" width="14" height="14" rx="2"/>
+      <rect x="-464" y="290" width="14" height="14" rx="2"/>
+      <rect x="-480" y="276" width="14" height="14" rx="2"/>
+      <rect x="-496" y="262" width="14" height="14" rx="2"/>
+      <rect x="-512" y="262" width="14" height="14" rx="2"/>
+      <rect x="-528" y="276" width="14" height="14" rx="2"/>
+      <rect x="-544" y="290" width="14" height="14" rx="2"/>
+      <!-- Tail fade -->
+      <rect x="-560" y="290" width="14" height="14" rx="2" opacity="0.8"/>
+      <rect x="-576" y="290" width="14" height="14" rx="2" opacity="0.6"/>
+      <rect x="-592" y="290" width="14" height="14" rx="2" opacity="0.4"/>
+      <rect x="-608" y="290" width="14" height="14" rx="2" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Snake eyes on head -->
+  <g class="snake">
+    <rect x="-76" y="293" width="3" height="3" fill="#FF0000"/>
+    <rect x="-76" y="298" width="3" height="3" fill="#FF0000"/>
+  </g>
+
+  <!-- LABEL -->
+  <text x="400" y="395" class="mc-text" font-size="14" fill="#AAAAAA" text-anchor="middle" opacity="0.8">🐍 Contribution Snake Cave — Diamonds await the brave!</text>
+
+</svg>

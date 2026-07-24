@@ -1,68 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="100%" height="240px">
-  <defs>
-    <style>
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-4px); }
-      }
-      .title {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 14px;
-        font-weight: bold;
-        fill: #FFFF55;
-        text-shadow: 2px 2px 0px #3F3F15;
-      }
-      .desc {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 16px;
-        fill: #FFFFFF;
-        text-shadow: 2px 2px 0px #3F3F3F;
-      }
-      .icon {
-        font-family: 'Segoe UI Emoji', sans-serif;
-        font-size: 32px;
-        text-anchor: middle;
-      }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 230" width="100%" height="230">
+  <!-- Achievement 1 -->
+  <rect x="0" y="0" width="300" height="65" fill="#212121" rx="2"/>
+  <line x1="0" y1="0" x2="300" y2="0" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="0" x2="0" y2="65" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="65" x2="300" y2="65" stroke="#111" stroke-width="3"/>
+  <line x1="300" y1="0" x2="300" y2="65" stroke="#111" stroke-width="3"/>
+  <text x="26" y="44" font-family="Segoe UI Emoji,sans-serif" font-size="30">🏆</text>
+  <text x="66" y="24" font-family="Courier New,monospace" font-size="13" font-weight="bold" fill="#FFFF55">Achievement get!</text>
+  <text x="66" y="48" font-family="Courier New,monospace" font-size="15" fill="#FFFFFF">2x Hackathon Finalist</text>
 
-  <g style="animation: float 4s infinite ease-in-out;">
-    
-    <!-- Achievement 1: Hackathon Finalist -->
-    <g transform="translate(0, 10)">
-      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
-      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
-      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
-      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
-      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
-      <text x="30" y="42" class="icon">🏆</text>
-      <text x="70" y="24" class="title">Achievement get!</text>
-      <text x="70" y="46" class="desc">2x Hackathon Finalist</text>
-    </g>
+  <!-- Achievement 2 -->
+  <rect x="0" y="83" width="300" height="65" fill="#212121" rx="2"/>
+  <line x1="0" y1="83" x2="300" y2="83" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="83" x2="0" y2="148" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="148" x2="300" y2="148" stroke="#111" stroke-width="3"/>
+  <line x1="300" y1="83" x2="300" y2="148" stroke="#111" stroke-width="3"/>
+  <text x="26" y="127" font-family="Segoe UI Emoji,sans-serif" font-size="30">💻</text>
+  <text x="66" y="107" font-family="Courier New,monospace" font-size="13" font-weight="bold" fill="#FFFF55">Achievement get!</text>
+  <text x="66" y="131" font-family="Courier New,monospace" font-size="15" fill="#FFFFFF">Fullstack &amp; AI Dev</text>
 
-    <!-- Achievement 2: Fullstack Developer -->
-    <g transform="translate(0, 85)">
-      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
-      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
-      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
-      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
-      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
-      <text x="30" y="42" class="icon">💻</text>
-      <text x="70" y="24" class="title">Achievement get!</text>
-      <text x="70" y="46" class="desc">Fullstack &amp; AI Dev</text>
-    </g>
-
-    <!-- Achievement 3: Shipped to Prod -->
-    <g transform="translate(0, 160)">
-      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
-      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
-      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
-      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
-      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
-      <text x="30" y="42" class="icon">🚀</text>
-      <text x="70" y="24" class="title">Achievement get!</text>
-      <text x="70" y="46" class="desc">Shipped to Production</text>
-    </g>
-    
-  </g>
+  <!-- Achievement 3 -->
+  <rect x="0" y="166" width="300" height="65" fill="#212121" rx="2"/>
+  <line x1="0" y1="166" x2="300" y2="166" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="166" x2="0" y2="231" stroke="#555" stroke-width="3"/>
+  <line x1="0" y1="231" x2="300" y2="231" stroke="#111" stroke-width="3"/>
+  <line x1="300" y1="166" x2="300" y2="231" stroke="#111" stroke-width="3"/>
+  <text x="26" y="210" font-family="Segoe UI Emoji,sans-serif" font-size="30">🚀</text>
+  <text x="66" y="190" font-family="Courier New,monospace" font-size="13" font-weight="bold" fill="#FFFF55">Achievement get!</text>
+  <text x="66" y="214" font-family="Courier New,monospace" font-size="15" fill="#FFFFFF">Shipped to Production</text>
 </svg>
