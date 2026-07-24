@@ -1,7 +1,7 @@
 # 🚧 Project Craftfolio
 
 <div align="center">
-  <img src="assets/hero-banner.svg" width="100%" alt="Craftfolio Hero Banner"/>
+  <img src="assets/hero-banner.svg?v=2" width="100%" alt="Craftfolio Hero Banner"/>
 </div>
 
 <br/>
@@ -9,10 +9,10 @@
 <table align="center" style="border: none; background: transparent;">
   <tr>
     <td width="60%" align="center" valign="middle" style="border: none;">
-      <img src="assets/player-card.svg" width="100%" alt="Player Identity Card"/>
+      <img src="assets/player-card.svg?v=2" width="100%" alt="Player Identity Card"/>
     </td>
     <td width="40%" align="center" valign="middle" style="border: none;">
-      <img src="assets/achievements.svg" width="100%" alt="Achievements"/>
+      <img src="assets/achievements.svg?v=2" width="100%" alt="Achievements"/>
     </td>
   </tr>
 </table>
@@ -26,14 +26,14 @@
 ---
 
 <div align="center">
-  <img src="assets/inventory.svg" width="100%" alt="Inventory Tech Stack"/>
+  <img src="assets/inventory.svg?v=2" width="100%" alt="Inventory Tech Stack"/>
 </div>
 
 ---
 
 <div align="center">
   <h2>🏰 World Map (Projects)</h2>
-  <img src="assets/projects.svg" width="100%" alt="Projects Landscape"/>
+  <img src="assets/projects.svg?v=2" width="100%" alt="Projects Landscape"/>
   
   <br/>
   <br/>
