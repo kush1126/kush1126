@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="220px">
+  <defs>
+    <!-- Filters for glow effects based on rarity -->
+    <filter id="glow-diamond" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" intercept="0.2" slope="0" />
+        <feFuncG type="linear" intercept="0.9" slope="0" />
+        <feFuncB type="linear" intercept="0.9" slope="0" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glow-epic" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" intercept="0.8" slope="0" />
+        <feFuncG type="linear" intercept="0.2" slope="0" />
+        <feFuncB type="linear" intercept="1.0" slope="0" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" intercept="1.0" slope="0" />
+        <feFuncG type="linear" intercept="0.84" slope="0" />
+        <feFuncB type="linear" intercept="0" slope="0" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-iron" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" intercept="0.8" slope="0" />
+        <feFuncG type="linear" intercept="0.8" slope="0" />
+        <feFuncB type="linear" intercept="0.8" slope="0" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+      .item { animation: float 3s infinite ease-in-out; }
+      .i1 { animation-delay: 0.0s; }
+      .i2 { animation-delay: 0.2s; }
+      .i3 { animation-delay: 0.4s; }
+      .i4 { animation-delay: 0.6s; }
+      .i5 { animation-delay: 0.8s; }
+      .i6 { animation-delay: 1.0s; }
+      .i7 { animation-delay: 1.2s; }
+      .i8 { animation-delay: 1.4s; }
+      .i9 { animation-delay: 1.6s; }
+      
+      .slot-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 13px;
+        font-weight: bold;
+        fill: #FFFFFF;
+        text-shadow: 2px 2px 0px #000;
+        text-anchor: middle;
+      }
+      .title {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 22px;
+        font-weight: bold;
+        fill: #404040;
+        text-shadow: 1px 1px 0px #FFFFFF;
+      }
+      .emoji {
+        font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+        font-size: 38px;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Main Background Container -->
+  <!-- Minecraft UI light grey base -->
+  <rect x="10" y="10" width="780" height="200" fill="#C6C6C6" />
+  
+  <!-- Outer Bevel -->
+  <path d="M 10,10 L 790,10 L 784,16 L 16,16 Z" fill="#FFFFFF" opacity="0.8" />
+  <path d="M 10,10 L 16,16 L 16,204 L 10,210 Z" fill="#FFFFFF" opacity="0.8" />
+  <path d="M 790,210 L 10,210 L 16,204 L 784,204 Z" fill="#555555" />
+  <path d="M 790,210 L 784,204 L 784,16 L 790,10 Z" fill="#555555" />
+
+  <text x="30" y="45" class="title">Inventory</text>
+
+  <!-- Slots Container -->
+  <!-- 9 slots * 74px + 8 gaps * 8px = 666 + 64 = 730px. Centered at X=35, Y=75 -->
+  <g transform="translate(35, 75)">
+    
+    <!-- Slot 1: React (Diamond Sword) -->
+    <g transform="translate(0, 0)">
+      <!-- Slot Background & Bevel -->
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <!-- Item & Text -->
+      <g class="item i1">
+        <text x="37" y="52" class="emoji" filter="url(#glow-diamond)">🗡️</text>
+      </g>
+      <text x="37" y="94" class="slot-text">React</text>
+    </g>
+
+    <!-- Slot 2: Node.js (Iron Axe) -->
+    <g transform="translate(82, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i2">
+        <text x="37" y="52" class="emoji" filter="url(#glow-iron)">🪓</text>
+      </g>
+      <text x="37" y="94" class="slot-text">Node.js</text>
+    </g>
+
+    <!-- Slot 3: Python (Enchanted Book) -->
+    <g transform="translate(164, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i3">
+        <text x="37" y="52" class="emoji" filter="url(#glow-epic)">📖</text>
+      </g>
+      <text x="37" y="94" class="slot-text" fill="#FF55FF">Python</text> <!-- Enchanted text color -->
+    </g>
+
+    <!-- Slot 4: AI (End Crystal) -->
+    <g transform="translate(246, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i4">
+        <text x="37" y="52" class="emoji" filter="url(#glow-epic)">🔮</text>
+      </g>
+      <text x="37" y="94" class="slot-text">AI</text>
+    </g>
+
+    <!-- Slot 5: FastAPI (Lightning Rod) -->
+    <g transform="translate(328, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i5">
+        <text x="37" y="52" class="emoji" filter="url(#glow-gold)">⚡</text>
+      </g>
+      <text x="37" y="94" class="slot-text">FastAPI</text>
+    </g>
+
+    <!-- Slot 6: TypeScript (Bow) -->
+    <g transform="translate(410, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i6">
+        <text x="37" y="52" class="emoji" filter="url(#glow-diamond)">🏹</text>
+      </g>
+      <text x="37" y="94" class="slot-text">TS</text>
+    </g>
+
+    <!-- Slot 7: Next.js (Nether Star) -->
+    <g transform="translate(492, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i7">
+        <text x="37" y="52" class="emoji" filter="url(#glow-iron)">🌟</text>
+      </g>
+      <text x="37" y="94" class="slot-text">Next.js</text>
+    </g>
+
+    <!-- Slot 8: Postgres (Elephant) -->
+    <g transform="translate(574, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i8">
+        <text x="37" y="52" class="emoji" filter="url(#glow-diamond)">🐘</text>
+      </g>
+      <text x="37" y="94" class="slot-text">Postgres</text>
+    </g>
+
+    <!-- Slot 9: Docker (Whale) -->
+    <g transform="translate(656, 0)">
+      <rect x="0" y="0" width="74" height="74" fill="#8B8B8B" />
+      <path d="M 0,0 L 74,0 L 70,4 L 4,4 Z" fill="#373737" />
+      <path d="M 0,0 L 4,4 L 4,70 L 0,74 Z" fill="#373737" />
+      <path d="M 74,74 L 0,74 L 4,70 L 70,70 Z" fill="#FFFFFF" opacity="0.7"/>
+      <path d="M 74,74 L 70,70 L 70,4 L 74,0 Z" fill="#FFFFFF" opacity="0.7"/>
+      <g class="item i9">
+        <text x="37" y="52" class="emoji" filter="url(#glow-diamond)">🐋</text>
+      </g>
+      <text x="37" y="94" class="slot-text">Docker</text>
+    </g>
+
+  </g>
+</svg>

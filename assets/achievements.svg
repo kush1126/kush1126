@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="240px">
+  <defs>
+    <style>
+      @keyframes slideIn {
+        0% { transform: translateX(420px); opacity: 0; }
+        15% { transform: translateX(0); opacity: 1; }
+        85% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(420px); opacity: 0; }
+      }
+      .achievement {
+        animation: slideIn 8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+        transform: translateX(420px);
+        opacity: 0;
+      }
+      .a1 { animation-delay: 0s; }
+      .a2 { animation-delay: 2s; }
+      .a3 { animation-delay: 4s; }
+      
+      .title {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        font-weight: bold;
+        fill: #FFFF55;
+        text-shadow: 2px 2px 0px #3F3F15;
+      }
+      .desc {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        fill: #FFFFFF;
+        text-shadow: 2px 2px 0px #3F3F3F;
+      }
+      .icon {
+        font-family: 'Segoe UI Emoji', sans-serif;
+        font-size: 32px;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- We use a clip path to hide elements outside the frame if necessary, but SVG viewBox naturally crops them -->
+
+  <!-- Container for centering -->
+  <g transform="translate(10, 0)">
+    
+    <!-- Achievement 1: Hackathon Finalist -->
+    <g transform="translate(40, 20)" class="achievement a1">
+      <!-- Background box -->
+      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
+      <!-- Borders -->
+      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
+      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
+      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
+      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
+      
+      <!-- Icon -->
+      <text x="30" y="42" class="icon">🏆</text>
+      
+      <!-- Text -->
+      <text x="70" y="24" class="title">Achievement get!</text>
+      <text x="70" y="46" class="desc">2x Hackathon Finalist</text>
+    </g>
+
+    <!-- Achievement 2: Fullstack Developer -->
+    <g transform="translate(40, 90)" class="achievement a2">
+      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
+      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
+      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
+      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
+      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
+      
+      <text x="30" y="42" class="icon">💻</text>
+      
+      <text x="70" y="24" class="title">Achievement get!</text>
+      <text x="70" y="46" class="desc">Fullstack &amp; AI Dev</text>
+    </g>
+
+    <!-- Achievement 3: Shipped to Prod -->
+    <g transform="translate(40, 160)" class="achievement a3">
+      <rect x="0" y="0" width="300" height="60" fill="#212121" rx="2" />
+      <path d="M 0,0 L 300,0 L 298,2 L 2,2 Z" fill="#555555" />
+      <path d="M 0,0 L 2,2 L 2,58 L 0,60 Z" fill="#555555" />
+      <path d="M 300,60 L 0,60 L 2,58 L 298,58 Z" fill="#000000" />
+      <path d="M 300,60 L 298,58 L 298,2 L 300,0 Z" fill="#000000" />
+      
+      <text x="30" y="42" class="icon">🚀</text>
+      
+      <text x="70" y="24" class="title">Achievement get!</text>
+      <text x="70" y="46" class="desc">Shipped to Production</text>
+    </g>
+    
+  </g>
+</svg>

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="300px">
+  <defs>
+    <!-- Minecraft UI Box Gradients and Patterns -->
+    <linearGradient id="boxGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A4A4A" />
+      <stop offset="100%" stop-color="#1E1E1E" />
+    </linearGradient>
+
+    <!-- Bevel effect for UI boxes -->
+    <filter id="bevel">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncA type="linear" slope="1" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      .floating-item { animation: float 3s infinite ease-in-out; }
+      .xp-text { animation: pulse 2s infinite ease-in-out; }
+      .mc-text { font-family: 'Courier New', Courier, monospace; }
+      
+      /* Sword drawing */
+      .sword-pixel { fill: #2E2E2E; }
+      .sword-diamond { fill: #33E5E5; }
+      .sword-handle { fill: #8B4513; }
+      .sword-guard { fill: #1E90FF; }
+    </style>
+  </defs>
+
+  <!-- Main Background Container (Minecraft Dirt/Stone Base or just sleek Dark UI) -->
+  <!-- Outer Border (Light) -->
+  <rect x="0" y="0" width="600" height="300" fill="#5E5E5E" rx="8" />
+  <!-- Inner Background (Dark) -->
+  <rect x="6" y="6" width="588" height="288" fill="#1F1F1F" rx="4" />
+  
+  <!-- Outer Bevel highlights -->
+  <path d="M 6,6 L 594,6 L 588,12 L 12,12 Z" fill="#888888" />
+  <path d="M 6,6 L 12,12 L 12,288 L 6,294 Z" fill="#888888" />
+  <path d="M 594,294 L 6,294 L 12,288 L 588,288 Z" fill="#000000" />
+  <path d="M 594,294 L 588,288 L 588,12 L 594,6 Z" fill="#000000" />
+
+  <!-- Avatar Section (Left) -->
+  <!-- Slot background -->
+  <rect x="40" y="40" width="160" height="160" fill="#000000" rx="4" />
+  <path d="M 40,40 L 200,40 L 196,44 L 44,44 Z" fill="#4A4A4A" />
+  <path d="M 40,40 L 44,44 L 44,196 L 40,200 Z" fill="#4A4A4A" />
+  <path d="M 200,200 L 40,200 L 44,196 L 196,196 Z" fill="#FFFFFF" opacity="0.3" />
+  <path d="M 200,200 L 196,196 L 196,44 L 200,40 Z" fill="#FFFFFF" opacity="0.3" />
+
+  <!-- The Avatar Image (Using href) -->
+  <!-- It relies on the local avatar.png or falls back to github rendering -->
+  <image href="avatar.png" x="45" y="45" width="150" height="150" />
+
+  <!-- XP / Level Bubble (Centered under avatar) -->
+  <g transform="translate(120, 220)">
+    <circle cx="0" cy="0" r="18" fill="#1F1F1F" stroke="#33E5E5" stroke-width="4" />
+    <text x="0" y="6" class="mc-text xp-text" font-size="18" font-weight="bold" fill="#33E5E5" text-anchor="middle">20</text>
+  </g>
+
+  <!-- Right Side Stats & Information -->
+  <g transform="translate(240, 50)">
+    
+    <!-- Title Area -->
+    <text x="0" y="10" class="mc-text" font-size="34" font-weight="bold" fill="#FFF" text-shadow="2px 2px 0px #000">Kush Maurya</text>
+    <text x="0" y="45" class="mc-text" font-size="20" fill="#AAAAAA" text-shadow="1px 1px 0px #000">Fullstack &amp; AI Developer</text>
+    
+    <!-- HUD: Hearts and Hunger -->
+    <g transform="translate(0, 80)">
+      <!-- Hearts -->
+      <g>
+        <text x="0" y="0" font-family="'Segoe UI Emoji', Arial, sans-serif" font-size="22">❤️❤️❤️❤️❤️❤️❤️❤️❤️🖤</text>
+      </g>
+      <!-- Hunger -->
+      <g transform="translate(0, 35)">
+        <text x="0" y="0" font-family="'Segoe UI Emoji', Arial, sans-serif" font-size="22">🍗🍗🍗🍗🍗🍗🍗🍗🍗🍗</text>
+      </g>
+    </g>
+
+    <!-- Experience / XP Bar -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="-10" class="mc-text" font-size="14" font-weight="bold" fill="#AAAAAA">XP / Contributions</text>
+      
+      <!-- XP Bar Background -->
+      <rect x="0" y="0" width="300" height="18" fill="#000" rx="2" />
+      <rect x="2" y="2" width="296" height="14" fill="#1C3F1F" rx="1" />
+      
+      <!-- XP Bar Fill (e.g., 85% full) -->
+      <rect x="2" y="2" width="250" height="14" fill="#39F547" rx="1" />
+      <!-- XP Bar Highlight -->
+      <rect x="2" y="2" width="250" height="4" fill="#88FFA1" rx="1" opacity="0.8" />
+      
+      <!-- Segment Lines -->
+      <g stroke="#1F8B27" stroke-width="2">
+        <line x1="30" y1="2" x2="30" y2="16" />
+        <line x1="60" y1="2" x2="60" y2="16" />
+        <line x1="90" y1="2" x2="90" y2="16" />
+        <line x1="120" y1="2" x2="120" y2="16" />
+        <line x1="150" y1="2" x2="150" y2="16" />
+        <line x1="180" y1="2" x2="180" y2="16" />
+        <line x1="210" y1="2" x2="210" y2="16" />
+        <line x1="240" y1="2" x2="240" y2="16" />
+        <line x1="270" y1="2" x2="270" y2="16" />
+      </g>
+    </g>
+    
+  </g>
+
+  <!-- Floating Diamond Sword (Top Right corner) -->
+  <g transform="translate(500, 40) rotate(45) scale(2.5)" class="floating-item">
+    <!-- A 10x10 pixel art diamond sword -->
+    <g fill="#000" opacity="0.2"><rect x="3" y="3" width="16" height="16" rx="1"/></g> <!-- Shadow -->
+    
+    <!-- Outline/Black pixels -->
+    <g class="sword-pixel">
+      <!-- Handle -->
+      <rect x="0" y="14" width="2" height="2"/>
+      <rect x="2" y="12" width="2" height="2"/>
+      <rect x="4" y="14" width="2" height="2"/>
+      <rect x="2" y="16" width="2" height="2"/>
+      
+      <!-- Guard -->
+      <rect x="4" y="12" width="2" height="2"/>
+      <rect x="6" y="14" width="2" height="2"/>
+      <rect x="2" y="8" width="2" height="2"/>
+      <rect x="4" y="6" width="2" height="2"/>
+      <rect x="6" y="8" width="2" height="2"/>
+      <rect x="8" y="10" width="2" height="2"/>
+      
+      <!-- Blade Edges -->
+      <rect x="6" y="4" width="2" height="2"/>
+      <rect x="8" y="2" width="2" height="2"/>
+      <rect x="10" y="0" width="2" height="2"/>
+      <rect x="12" y="0" width="2" height="2"/>
+      <rect x="14" y="2" width="2" height="2"/>
+      <rect x="14" y="4" width="2" height="2"/>
+      <rect x="12" y="6" width="2" height="2"/>
+      <rect x="10" y="8" width="2" height="2"/>
+    </g>
+    
+    <!-- Handle Brown -->
+    <g class="sword-handle">
+      <rect x="2" y="14" width="2" height="2"/>
+    </g>
+    
+    <!-- Guard Blue -->
+    <g class="sword-guard">
+      <rect x="4" y="8" width="2" height="2"/>
+      <rect x="4" y="10" width="2" height="2"/>
+      <rect x="6" y="10" width="2" height="2"/>
+      <rect x="6" y="12" width="2" height="2"/>
+    </g>
+    
+    <!-- Blade Diamond -->
+    <g class="sword-diamond">
+      <rect x="6" y="6" width="2" height="2"/>
+      <rect x="8" y="4" width="2" height="2"/>
+      <rect x="8" y="6" width="2" height="2"/>
+      <rect x="8" y="8" width="2" height="2"/>
+      <rect x="10" y="2" width="2" height="2"/>
+      <rect x="10" y="4" width="2" height="2"/>
+      <rect x="10" y="6" width="2" height="2"/>
+      <rect x="12" y="2" width="2" height="2"/>
+      <rect x="12" y="4" width="2" height="2"/>
+    </g>
+  </g>
+
+</svg>
