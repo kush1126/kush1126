@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="240">
+  <defs>
+    <style>
+      @keyframes enchantScroll {
+        0% { transform: translateY(0); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-220px); opacity: 0; }
+      }
+      @keyframes shimmer {
+        0%,100% { fill: #A855F7; }
+        33% { fill: #33E5E5; }
+        66% { fill: #FFD700; }
+      }
+      @keyframes tableGlow {
+        0%,100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      @keyframes bookFloat {
+        0%,100% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(-12px) rotate(5deg); }
+      }
+      .mc-text { font-family: 'Courier New', monospace; }
+      .enchant-glyph { animation: shimmer 3s infinite; font-family: 'Courier New', monospace; font-size: 14px; opacity: 0.7; }
+      .book { animation: bookFloat 4s infinite ease-in-out; }
+      .table-glow { animation: tableGlow 2s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Background: Library-ish -->
+  <rect width="800" height="240" fill="#0F0A1A" rx="8"/>
+  <rect width="800" height="240" fill="none" stroke="#6B21A8" stroke-width="3" rx="8"/>
+
+  <!-- Purple gradient background panels -->
+  <rect x="0" y="0" width="800" height="240" fill="#1A0A30" rx="8" opacity="0.9"/>
+  
+  <!-- Bookshelf left -->
+  <g>
+    <rect x="0" y="0" width="80" height="240" fill="#3E2723" rx="4"/>
+    <g fill="#5D4037">
+      <rect x="5" y="10" width="70" height="35"/>
+      <rect x="5" y="55" width="70" height="35"/>
+      <rect x="5" y="100" width="70" height="35"/>
+      <rect x="5" y="145" width="70" height="35"/>
+      <rect x="5" y="190" width="70" height="35"/>
+    </g>
+    <!-- Book spines -->
+    <rect x="8" y="12" width="10" height="31" fill="#C62828"/>
+    <rect x="20" y="12" width="10" height="31" fill="#1565C0"/>
+    <rect x="32" y="12" width="10" height="31" fill="#2E7D32"/>
+    <rect x="44" y="12" width="10" height="31" fill="#F57F17"/>
+    <rect x="56" y="12" width="10" height="31" fill="#6A1B9A"/>
+
+    <rect x="8" y="57" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="20" y="57" width="10" height="31" fill="#C62828"/>
+    <rect x="32" y="57" width="10" height="31" fill="#F57F17"/>
+    <rect x="44" y="57" width="10" height="31" fill="#2E7D32"/>
+    <rect x="56" y="57" width="10" height="31" fill="#1565C0"/>
+
+    <rect x="8" y="102" width="10" height="31" fill="#1565C0"/>
+    <rect x="20" y="102" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="32" y="102" width="10" height="31" fill="#C62828"/>
+    <rect x="44" y="102" width="10" height="31" fill="#2E7D32"/>
+    <rect x="56" y="102" width="10" height="31" fill="#F57F17"/>
+
+    <rect x="8" y="147" width="10" height="31" fill="#F57F17"/>
+    <rect x="20" y="147" width="10" height="31" fill="#1565C0"/>
+    <rect x="32" y="147" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="44" y="147" width="10" height="31" fill="#C62828"/>
+    <rect x="56" y="147" width="10" height="31" fill="#2E7D32"/>
+  </g>
+
+  <!-- Bookshelf right -->
+  <g transform="translate(720, 0)">
+    <rect x="0" y="0" width="80" height="240" fill="#3E2723" rx="4"/>
+    <g fill="#5D4037">
+      <rect x="5" y="10" width="70" height="35"/>
+      <rect x="5" y="55" width="70" height="35"/>
+      <rect x="5" y="100" width="70" height="35"/>
+      <rect x="5" y="145" width="70" height="35"/>
+      <rect x="5" y="190" width="70" height="35"/>
+    </g>
+    <rect x="8" y="12" width="10" height="31" fill="#2E7D32"/>
+    <rect x="20" y="12" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="32" y="12" width="10" height="31" fill="#C62828"/>
+    <rect x="44" y="12" width="10" height="31" fill="#1565C0"/>
+    <rect x="56" y="12" width="10" height="31" fill="#F57F17"/>
+
+    <rect x="8" y="57" width="10" height="31" fill="#F57F17"/>
+    <rect x="20" y="57" width="10" height="31" fill="#C62828"/>
+    <rect x="32" y="57" width="10" height="31" fill="#1565C0"/>
+    <rect x="44" y="57" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="56" y="57" width="10" height="31" fill="#2E7D32"/>
+
+    <rect x="8" y="102" width="10" height="31" fill="#C62828"/>
+    <rect x="20" y="102" width="10" height="31" fill="#F57F17"/>
+    <rect x="32" y="102" width="10" height="31" fill="#6A1B9A"/>
+    <rect x="44" y="102" width="10" height="31" fill="#1565C0"/>
+    <rect x="56" y="102" width="10" height="31" fill="#2E7D32"/>
+  </g>
+
+  <!-- Enchanting Table (center) -->
+  <!-- Table glow aura -->
+  <ellipse cx="400" cy="195" rx="120" ry="20" fill="#7C3AED" opacity="0.3" class="table-glow"/>
+  <!-- Table base -->
+  <rect x="330" y="170" width="140" height="40" fill="#1A0030" rx="4"/>
+  <rect x="330" y="165" width="140" height="10" fill="#4C1D95" rx="2"/>
+  <!-- Table top: Red book surface -->
+  <rect x="340" y="145" width="120" height="25" fill="#B91C1C" rx="3"/>
+  <rect x="345" y="150" width="110" height="15" fill="#991B1B"/>
+  <!-- Book clasp -->
+  <rect x="394" y="148" width="12" height="20" fill="#B45309"/>
+
+  <!-- Floating Book above table -->
+  <g transform="translate(400, 90)" class="book">
+    <!-- Book body -->
+    <rect x="-30" y="-20" width="60" height="40" fill="#B91C1C" rx="2"/>
+    <!-- Book pages -->
+    <rect x="-28" y="-18" width="56" height="36" fill="#FDE68A"/>
+    <!-- Book spine -->
+    <rect x="-30" y="-20" width="6" height="40" fill="#7F1D1D"/>
+    <!-- Book lines (text) -->
+    <line x1="-18" y1="-10" x2="22" y2="-10" stroke="#92400E" stroke-width="1.5"/>
+    <line x1="-18" y1="-4" x2="22" y2="-4" stroke="#92400E" stroke-width="1.5"/>
+    <line x1="-18" y1="2" x2="22" y2="2" stroke="#92400E" stroke-width="1.5"/>
+    <line x1="-18" y1="8" x2="10" y2="8" stroke="#92400E" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating Enchanting Glyphs -->
+  <text x="120" y="80" class="enchant-glyph" style="animation-delay:0s">✦ ɐ ʇ</text>
+  <text x="160" y="130" class="enchant-glyph" style="animation-delay:0.5s">ʌ ᴉ ɔ</text>
+  <text x="580" y="75" class="enchant-glyph" style="animation-delay:1s">ɹ ǝ p</text>
+  <text x="620" y="140" class="enchant-glyph" style="animation-delay:1.5s">ʞ ɔ ɐ</text>
+  <text x="240" y="50" class="enchant-glyph" style="animation-delay:0.8s">ʇ ʍ ɐ</text>
+  <text x="510" y="50" class="enchant-glyph" style="animation-delay:1.3s">ɹ ǝ ᴉ</text>
+
+  <!-- Currently Learning Panel -->
+  <rect x="120" y="20" width="560" height="110" fill="#1E0A3C" rx="6" opacity="0.85"/>
+  <rect x="120" y="20" width="560" height="110" fill="none" stroke="#7C3AED" stroke-width="1.5" rx="6"/>
+  
+  <text x="400" y="48" class="mc-text" font-size="17" font-weight="bold" fill="#A855F7" text-anchor="middle">📖 Currently Enchanting (Learning)</text>
+  <line x1="140" y1="54" x2="660" y2="54" stroke="#7C3AED" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Items being learned -->
+  <g>
+    <text x="155" y="80" font-family="Segoe UI Emoji,sans-serif" font-size="20">🦀</text>
+    <text x="178" y="80" class="mc-text" font-size="13" fill="#FDE68A">Rust Lang</text>
+    <rect x="178" y="83" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="178" y="83" width="30" height="8" fill="#F97316" rx="2"/>
+  </g>
+  <g>
+    <text x="310" y="80" font-family="Segoe UI Emoji,sans-serif" font-size="20">☁️</text>
+    <text x="333" y="80" class="mc-text" font-size="13" fill="#FDE68A">AWS Cloud</text>
+    <rect x="333" y="83" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="333" y="83" width="45" height="8" fill="#F59E0B" rx="2"/>
+  </g>
+  <g>
+    <text x="465" y="80" font-family="Segoe UI Emoji,sans-serif" font-size="20">🧠</text>
+    <text x="488" y="80" class="mc-text" font-size="13" fill="#FDE68A">LLM / RAG</text>
+    <rect x="488" y="83" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="488" y="83" width="55" height="8" fill="#8B5CF6" rx="2"/>
+  </g>
+
+  <!-- Second row -->
+  <g>
+    <text x="155" y="110" font-family="Segoe UI Emoji,sans-serif" font-size="20">🕸️</text>
+    <text x="178" y="110" class="mc-text" font-size="13" fill="#FDE68A">Web3 / Solidity</text>
+    <rect x="178" y="113" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="178" y="113" width="20" height="8" fill="#6366F1" rx="2"/>
+  </g>
+  <g>
+    <text x="350" y="110" font-family="Segoe UI Emoji,sans-serif" font-size="20">🐘</text>
+    <text x="373" y="110" class="mc-text" font-size="13" fill="#FDE68A">PostgreSQL</text>
+    <rect x="373" y="113" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="373" y="113" width="50" height="8" fill="#0EA5E9" rx="2"/>
+  </g>
+  <g>
+    <text x="500" y="110" font-family="Segoe UI Emoji,sans-serif" font-size="20">🤖</text>
+    <text x="523" y="110" class="mc-text" font-size="13" fill="#FDE68A">AI Agents</text>
+    <rect x="523" y="113" width="80" height="8" fill="#1A0A30" rx="2"/>
+    <rect x="523" y="113" width="40" height="8" fill="#EC4899" rx="2"/>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="400" y="228" class="mc-text" font-size="13" fill="#7C3AED" text-anchor="middle" opacity="0.8">✨ Enchanting table active — XP flows from every commit ✨</text>
+</svg>
