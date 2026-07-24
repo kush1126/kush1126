@@ -117,29 +117,31 @@ AI-driven flow / productivity tool.
 
 <br/>
 
-## &#9656; GitHub Stats
+## ▶ GitHub Stats
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=kush1126&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0a0612&title_color=08D9D6&icon_color=FF2E63&text_color=e8e2fb" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=kush1126&theme=dark&hide_border=true&background=0a0612&stroke=7B2FF7&ring=FF2E63&fire=08D9D6&currStreakLabel=e8e2fb" height="165"/>
+
+<img src="https://github-readme-stats.vercel.app/api?username=kush1126&show_icons=true&theme=chartreuse-dark&hide_border=true" height="170"/>
+
+<img src="https://streak-stats.demolab.com?user=kush1126&theme=chartreuse-dark&hide_border=true" height="170"/>
+
 </div>
+
+<br>
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kush1126&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0a0612&title_color=08D9D6&text_color=e8e2fb" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kush1126&layout=compact&theme=chartreuse-dark&hide_border=true"/>
+
 </div>
+
+<br>
 
 <div align="center">
-### 🐍 Contribution Snake
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kush1126/kush1126/output/github-contribution-grid-snake.svg" alt="Contribution Snake" width="100%">
-</p>
+<img src="https://raw.githubusercontent.com/kush1126/kush1126/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution Snake"/>
+
 </div>
-
-<sub align="center">↑ animated contribution snake — generated automatically by the workflow in <code>.github/workflows/snake.yml</code> once Actions runs on this repo (see setup note below).</sub>
-
-<br/>
-<br/>
 
 ## &#9656; Connect
 
