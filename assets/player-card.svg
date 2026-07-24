@@ -60,8 +60,8 @@
   <path d="M 200,200 L 196,196 L 196,44 L 200,40 Z" fill="#FFFFFF" opacity="0.3" />
 
   <!-- The Avatar Image (Using href) -->
-  <!-- It relies on the local avatar.png or falls back to github rendering -->
-  <image href="avatar.png" x="45" y="45" width="150" height="150" />
+  <!-- It relies on the local profile.jpg or falls back to github rendering -->
+  <image href="profile.jpg" x="45" y="45" width="150" height="150" />
 
   <!-- XP / Level Bubble (Centered under avatar) -->
   <g transform="translate(120, 220)">

@@ -1,20 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="240px">
   <defs>
     <style>
-      @keyframes slideIn {
-        0% { transform: translateX(420px); opacity: 0; }
-        15% { transform: translateX(0); opacity: 1; }
-        85% { transform: translateX(0); opacity: 1; }
-        100% { transform: translateX(420px); opacity: 0; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
       }
       .achievement {
-        animation: slideIn 8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
-        transform: translateX(420px);
-        opacity: 0;
+        animation: float 4s infinite ease-in-out;
       }
       .a1 { animation-delay: 0s; }
-      .a2 { animation-delay: 2s; }
-      .a3 { animation-delay: 4s; }
+      .a2 { animation-delay: 1.33s; }
+      .a3 { animation-delay: 2.66s; }
       
       .title {
         font-family: 'Courier New', Courier, monospace;
@@ -36,8 +32,6 @@
       }
     </style>
   </defs>
-
-  <!-- We use a clip path to hide elements outside the frame if necessary, but SVG viewBox naturally crops them -->
 
   <!-- Container for centering -->
   <g transform="translate(10, 0)">
